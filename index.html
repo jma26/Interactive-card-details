@@ -46,16 +46,16 @@
             <fieldset class="preview-card__form-fieldset">
               <legend>EXP. DATE (MM/YY)</legend>
               <label for="exp-date-mm">
-                <input type="number" id="exp-date-mm" name="exp-date-mm" placeholder="MM" required aria-describedby="exp-date-error">
+                <input type="text" id="exp-date-mm" name="exp-date-mm" placeholder="MM" inputmode="numeric" pattern="\d*" maxlength="2" required aria-describedby="exp-date-error">
               </label>
               <label for="exp-date-yy">
-                <input type="number" id="exp-date-yy" name="exp-date-yy" placeholder="YY" required aria-describedby="exp-date-error">
+                <input type="text" id="exp-date-yy" name="exp-date-yy" placeholder="YY" inputmode="numeric" pattern="\d*"  required maxlength="2" aria-describedby="exp-date-error">
               </label>
               <span class="preview-card__error-message" id="exp-date-error"></span>
             </fieldset>
             <div class="preview-card__form-group preview-card__form-group--cvc">
               <label for="cvc">CVC</label>
-              <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" required aria-describedby="cvc-error">
+              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" inputmode="numeric" pattern="\d*" required maxlength="2" aria-describedby="cvc-error">
               <span class="preview-card__error-message" id="cvc-error"></span>
             </div>
           </div>
