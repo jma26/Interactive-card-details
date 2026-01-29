@@ -1,5 +1,8 @@
 const form = document.querySelector('.preview-card__details-form');
 const errorMessages = document.querySelectorAll('.preview-card__error-message');
+const formDetailsSection = document.querySelector('.preview-card__details-container')
+const confirmationSection = document.querySelector('.preview-card__confirmation-container');
+const confirmationButton = document.querySelector('.preview-card__confirmation-continue-button');
 
 const formInputs = {
   cardholder_name: document.querySelector('#cardholder_name'),
@@ -36,6 +39,8 @@ form.addEventListener('submit', (event) => {
 
   if (Object.keys(errors).length === 0) {
     console.log('Form is valid!');
+    formDetailsSection.style.display = 'none';
+    confirmationSection.style.display = 'flex';
   } else {
     console.log('Form is not valid');
   }
@@ -83,3 +88,7 @@ const displayErrors = (errors) => {
     }
   });
 }
+
+confirmationButton.addEventListener('click', () => {
+  location.reload();
+})

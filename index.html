@@ -14,7 +14,7 @@
 </head>
 <body>
   <main>
-    <section class="interactive__card-section">
+    <section class="interactive__card-section form__section">
       <header class="interactive__card-header">
         <div class="preview-card__container">
           <div class="preview-card__front-card-wrapper">
@@ -31,6 +31,7 @@
         </div>
       </header>
       <div class="preview-card__details-container">
+        <!-- Form -->
         <form class="preview-card__details-form" novalidate>
           <div class="preview-card__form-group">
             <label for="cardholder_name">CARDHOLDER NAME</label>
@@ -61,6 +62,14 @@
           </div>
           <button type="submit" class="preview-card__confirm-button">Confirm</button>
         </form>
+      </div>
+
+      <!-- Thank you confirmation -->
+      <div class="preview-card__confirmation-container">
+        <img class="preview-card__confirmation-complete-icon" src="./images/icon-complete.svg" alt="">
+        <h2 class="preview-card__confirmation-headline">THANK YOU!</h2>
+        <p class="preview-card__confirmation-copy">We've added your card details</p>
+        <button type="reset" class="preview-card__confirmation-continue-button">Continue</button>
       </div>
     </section>
   </main>
